@@ -36,13 +36,13 @@ class MainActivity : AppCompatActivity() {
         val day = myCalendar.get(Calendar.DAY_OF_MONTH)
         val dpd = DatePickerDialog(this,{view, year, month, dayOfMonth ->
 
-            val selectedDate = "$year/${month+1}/$dayOfMonth"
+            val selectedDate = "$dayOfMonth/${month+1}/$year"
             val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
-            val theDateinMinutes = sdf.parse(selectedDate).time / 60000000000
-            val currentDateinMinutes = sdf.parse(sdf.format(System.currentTimeMillis())).time / 60000000000
-            val differenceInMinutes = currentDateinMinutes - theDateinMinutes
+            val theDateinHours = sdf.parse(selectedDate).time / 3600000
+            val currentDateinHours = sdf.parse(sdf.format(System.currentTimeMillis())).time / 3600000
+            val differenceInHours = currentDateinHours - theDateinHours
             dateTextView?.text = selectedDate
-            minutesTextView?.text = differenceInMinutes.toString()
+            minutesTextView?.text = differenceInHours.toString()
         },
             year,
             month,

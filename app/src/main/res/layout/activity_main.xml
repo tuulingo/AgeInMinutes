@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16sp"
-        android:text="IN MINUTES"
+        android:text="IN HOURS"
         android:textColor="@color/textBrown"
         android:textSize="22sp"
         android:textStyle="bold" />
@@ -78,7 +78,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Approximate minutes until selected date"
+        android:text="Approximate hours until selected date"
         android:textColor="@color/gray"
         android:textSize="16sp" />
 
